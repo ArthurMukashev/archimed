@@ -276,7 +276,7 @@ Header CSS
 .header_content{
     background: #fff;
     border-bottom: 3px solid #e4e4e4;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Times New Roman', Times, serif, serif;
     position: relative;
     z-index: 9;
 }

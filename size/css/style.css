@@ -48,7 +48,7 @@ body {
     
 }
 .sidebar {
-    background-color: yellow;
+    background-color: #ffea00;
     width: 20%;
     min-height: 140px;
     border-radius: 5px;
@@ -68,7 +68,7 @@ body {
     border-radius: 5px;
 }
 .sidebar_2 {
-    background-color: yellow;
+    background-color: #ffea00;
     width: 20%;
    min-height: 100px;
    border-radius: 5px;

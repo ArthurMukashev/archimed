@@ -26,6 +26,8 @@ header {
     margin-top: 10px;
     border-radius: 8px;
     background-color: #ffea00;
+    position: relative;
+    
 }
 
 header a {
@@ -44,7 +46,7 @@ nav ul {
 
 .topmenu>li {
     float: left;
-    position: relative;
+    /* position: relative; */
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -63,7 +65,7 @@ nav ul {
 .submenu {
     background: #273037;
     position: absolute;
-    left: 0;
+    /* left: 0; */
     top: 100%;
     z-index: 5;
     width: 150px;
@@ -174,7 +176,7 @@ section {
     background: #E8E8E8;
     float: left;
     width: 32% ;
-    height: 350px;
+    
     margin: 10px;
     border-radius: 8px;
 }
@@ -188,3 +190,8 @@ section {
     height: 90%;
     border-radius: 5px;
 }
+@media  (min-width: 1366px) and (max-width: 1920px) {
+    .column {
+      width: 31.5%;
+    }
+  }

@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/favicon.ico">
+
+    <title>Регистрация</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/signin.css" rel="stylesheet">
+
+
+    <style>
+        .vibor{
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body class="text-center">
+
+<script src="assets/js/jquery-2.1.3.min.js"></script>
+<script src="js/sweetalert.js"></script>
+
+<script src="js/register.js"></script>
+
+<form id="ajax_form" class="form-signin" method="post" action="">
+    <h1 class="h3 mb-3 font-weight-normal">Регистрация в системе</h1>
+    <input type="text" name="username" class="form-control" placeholder="Ваше Имя" required autofocus>
+    <input type="text" name="usersur" class="form-control" placeholder="Ваша Фамилия" required>
+    <input type="text" name="userotch" class="form-control" placeholder="Ваше Отчество" required>
+    <input type="email" name="inputEmail" class="form-control" placeholder="Введите ваш E-mail" required>
+    <input type="password" name="inputPassword" style="margin-bottom: 0px"  class="form-control" placeholder="Придумайте пароль" required>
+    <input type="password" name="inputPassword2" class="form-control" placeholder="Введите пароль еще раз" required>
+    <label>Статус:</label>
+    <select name="who" class="vibor">
+        <option>Ученик</option>
+        <option>Преподаватель</option>
+    </select>
+    <div class="checkbox mb-3">
+        <label>
+            Уже есть аккаунт? <a href="enter.html">Вход</a>
+        </label>
+    </div>
+    <a href="enter.html">На главную</a>
+    <button id="btn" class="btn btn-lg btn-primary btn-block" type="submit">Зарегистрироваться</button>
+    <!--<p class="mt-5 mb-3 text-muted">&copy; Mukashev Corp. 2019-2020</p>-->
+</form>
+</body>
+</html>

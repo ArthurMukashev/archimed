@@ -1,28 +1,28 @@
-//var myurl='https://cors-anywhere.herokuapp.com/https://mbook1998.herokuapp.com/';
-var myurl='../interactive_b/';
-var phpurl='enter.php';
-var surl=myurl+phpurl;
+var myurl='../../archimed_b/';
+var enterurl = myurl+'enter.php';
 
-$(document).ready(function(){
-    $('#btn').on('click', function(event){
+
+$(document).ready(function () {
+    $("#vhod").on('click',function (event) { 
         event.preventDefault();
-        let timerInterval
+        let timerInterval;
         Swal.fire({
             title: 'Вход в систему',
-                html: 'Пожалуйста, подождите...',
-                timer: 1000,
-                onBeforeOpen: () => {
-                    Swal.showLoading();
-                    sendAjaxForm('ajax_form',surl);
-                },
-                onClose: () => {
-                    clearInterval(timerInterval);
-                }
+            html: 'Пожалуйста, подождите...',
+            onBeforeOpen:() => {
+                Swal.showLoading();
+                enter_system('enter_form',enterurl);
+            },
+            timer: 1000,
+            onClose: () => {
+                clearInterval(timerInterval);
+            }
         })
-    })
+     })
 })
 
-function sendAjaxForm(ajax_form,url){
+
+function enter_system(ajax_form,url){
     $.ajax({
         url:url,
         type:'POST',
@@ -30,7 +30,7 @@ function sendAjaxForm(ajax_form,url){
         data:$("#"+ajax_form).serialize(),
         success:function(response){
             switch (response){
-                case 'Проверьте введенные данные.':{
+                case 'Введите пароль.':{
                     Swal.fire({
                         icon:'question',
                         title:'Что-то пошло не так...',
@@ -38,7 +38,7 @@ function sendAjaxForm(ajax_form,url){
                     });
                     break;
                 }
-                case 'Такого пользователя не существует.':{
+                case 'Пользователя не существует.':{
                     Swal.fire({
                         icon:'warning',
                         title:'Ошибка!',
@@ -46,7 +46,7 @@ function sendAjaxForm(ajax_form,url){
                     });
                     break;
                 }
-                case 'Неверный пароль!':{
+                case 'Пароль неверный.':{
                     Swal.fire({
                         icon:'error',
                         title:'Критическая ошибка!',
@@ -55,7 +55,7 @@ function sendAjaxForm(ajax_form,url){
                        break;
                    }
                    default:{
-                       window.location=response;
+                    window.location=response;
                    }
                }
            }

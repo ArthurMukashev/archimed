@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Режим администратора</title>
+	<meta name="description" content="Blueprint: A basic template for a page stack navigation effect" />
+	<meta name="keywords" content="blueprint, template, html, css, page stack, 3d, perspective, navigation, menu" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="assets/favicon.ico">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/super.css">
+	<script src="assets/js/modernizr-custom.js"></script>
+</head>
+
+<body>
+	<!-- navigation -->
+	<nav class="pages-nav">
+		<div class="pages-nav__item"><a class="link link--page" href="#page-home">Главная</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-docu" id='all-req'>Заявки</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-manuals" id='all-prep'>Преподаватели</a></div>
+
+		<div class="pages-nav__item"><a class="link link--page" href="#page-custom" id='all-stud'>Ученики</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-training" id='all-news'>Новостная лента</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-buy">Расписание</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-blog" id="all-media">Медиатека</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-contact" id="all-feedback">Отзывы</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-contact2" id="all-feedback">Предметы</a></div>
+	</nav>
+	<!-- /navigation-->
+	<!-- pages stack -->
+	<div class="pages-stack">
+		<!-- page -->
+		<div class="page" id="page-home">
+			<!-- Blueprint header -->
+			<header class="bp-header cf">
+				<span class="bp-header__present">Режим администратора</span>
+				<h1>Выберите пункт меню, нажав на кнопку с изображением трех полосок</h1>
+				<nav class="bp-nav">
+					<a href="index.html">Вернуться на главную страницу</a>
+				</nav>
+			</header>
+		</div>
+		<!-- /page -->
+		<div class="page" id="page-docu">
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">Заявки</h1>
+				<p class="bp-header__desc">Здесь вы можете просмотреть заявки.</p>
+				
+				<!-- Добавить стили или оформление табилицы -->
+				
+				<table id="requests"></table>
+				
+			</header>
+		</div>
+		<div class="page" id="page-manuals">
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">Преподаватели</h1>
+				<p class="bp-header__desc">Здесь вы можете просмотреть, добавить или удалить преподавателя</p>
+
+				<p class="info">Выберите действие</p>
+				<select class="s_new" id="prepod_action">
+					<option>Просмотреть преподавателей</option>
+					<option>Добавить преподавателя</option>
+				</select>
+				
+				<div id="all_prepods" style="overflow:scroll; max-height: 500px;">
+					<table id="prepod_table" border="4 px"></table>
+				</div>
+
+				<div id="new_prepod">
+					<p class="info">
+						Введите данные и нажмите "Добавить преподавателя"
+					</p>
+					<form id="add_prepod_form">
+						<div class="form__group field">
+							<input type="text" class="form__field" placeholder="Введите имя" name="inputName" required>
+							<input type="text" class="form__field" placeholder="Введите фамилию" name="inputSurname"
+								required>
+							<input type="text" class="form__field" placeholder="Введите отчество" name="inputOtch"
+								required>
+							<input type="text" class="form__field" placeholder="Введите номер телефона" name="inputTel"
+								required>
+							<input type="email" class="form__field" placeholder="E-mail" name="inputEmail" required>
+							<input type="password" class="form__field" placeholder="Пароль" name="inputPassword"
+								required>
+							<input type="password" class="form__field" placeholder="Повторите пароль"
+								name="inputPassword2" required>
+							<p>
+								<button id="btn-add-prepod" type="submit" class="b_new">Добавить преподавателя</button>
+							</p>
+					</form>
+				</div>
+			</header>
+		</div>
+		
+		<div class="page" id="page-custom">
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">Ученики</h1>
+				<p class="bp-header__desc">Здесь вы можете просмотреть, добавить или удалить ученика</p>
+
+				<p class="info">Выберите действие</p>
+				<select class="s_new" id="child">
+					<option>Просмотреть учеников</option>
+					<option>Добавить ученика</option>
+				</select>
+
+				<div id="show_child">
+					<table id="child_table"></table>
+				</div>
+
+
+
+				<div id="new_child">
+					<p class="info">
+						Введите данные и нажмите "Добавить ученика"
+					</p>
+					<form id="child_parent_form">
+						<div class="form__group field" style="overflow: scroll; max-height: 500px;">
+							<input type="text" class="form__field" placeholder="Введите имя" name="inputName" required>
+							<input type="text" class="form__field" placeholder="Введите фамилию" name="inputSurname"
+								required>
+							<input type="text" class="form__field" placeholder="Введите отчество" name="inputOtch"
+								required>
+							<input type="text" class="form__field" placeholder="Введите школу" name="inputSсhool"
+								required>
+							<input type="text" class="form__field" placeholder="Введите класс" name="inputClass"
+								required>
+							<p class="x">Введите данные о представителе</p>
+							
+							<input type="text" class="form__field" placeholder="Введите имя" name="username" required>
+							<input type="text" class="form__field" placeholder="Введите фамилию" name="usersur" required>
+							<input type="text" class="form__field" placeholder="Введите отчество" name="userotch" required>
+							<input type="text" class="form__field" placeholder="Мобильный телефон" name="inputTel" required>
+							<input type="text" class="form__field" placeholder="Домашний телефон (или запасной)" name="inputTel2" required>
+							<input type="text" class="form__field" placeholder="Введите адрес" name="useradr" required>
+							<input type="text" class="form__field" placeholder="Примечание" name="inputPrim" required>
+
+							
+							
+							<br>
+							<input type="email" class="form__field" placeholder="E-mail" name="inputEmail" required>
+							<input type="password" class="form__field" placeholder="Пароль" name="inputPassword"
+								required>
+							<input type="password" class="form__field" placeholder="Повторите пароль"
+								name="inputPassword2" required>
+							<p>
+								<button id="btn-add-child" type="submit" class="b_new">Добавить ученика</button>
+							</p>
+					</form>
+				</div>
+			
+
+			</header>
+		</div>
+		<div class="page" id="page-training">
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">Новостная лента</h1>
+				<p class="bp-header__desc">Здесь вы можете изменить статус новости, создать или удалить новость</p>
+				<p class="info">Выберите действие</p>
+				<select class="s_new" id="news">
+					<option>Изменить статус</option>
+					<option>Добавить новость</option>
+				</select>
+				<div id="post_status">
+					<table id="all_posts"></table>
+				</div>
+				
+				<div id="new_post">
+					<form id="add_post_form">
+						<input class="form__field" type="text" name="post_head" placeholder="Заголовок статьи">
+						<br>
+						<textarea style="margin-top: 10px; margin-bottom: 10px;" name="post_desc" cols="71" rows="20" placeholder="Содержание статьи"></textarea>
+						<br>
+						<select class="s_new" style="padding:5px 100px; margin-left: 120px;" name="post_level">
+							<option value="1">Главная</option>
+							<option value="2">Новости</option>
+						</select>
+						<br>
+						<button id="btn-add-post" type="submit" class="b_new">Добавить статью</button>
+					</form>
+				</div>
+				
+				<!--  -->
+			</header>
+		</div>
+		<div class="page" id="page-buy">
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">Расписание</h1>
+				<p class="bp-header__desc">Здесь вы можете настроить расписание</p>
+			</header>
+		</div>
+		<div class="page" id="page-blog">
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">Медиатека</h1>
+				<p class="bp-header__desc">Здесь вы можете добавить или удалить фотографии</p>
+				<p class="info">Выберите действие</p>
+				<select class="s_new">
+					<option>Добавить фотографию</option>
+					<option>Удалить фотографию</option>
+				</select>
+			</header>
+		</div>
+		<div class="page" id="page-contact">
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">Отзывы</h1>
+				<p class="bp-header__desc">Здесь вы можете просмотреть отзывы</p>
+				
+			</header>
+		</div>
+		<div class="page" id="page-contact2">
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">Предметы</h1>
+				<p class="bp-header__desc">Здесь вы можете просмотреть, добавить, удалить и сопоставить преподаваемые предметы</p>
+				<p class="info">Выберите действие</p>
+				<select class="s_new">
+					<option>Добавить предмет</option>
+					<option>Удалить предмет</option>
+					<option>Просмотреть предметы</option>
+					<option>Сопоставить предметы</option>
+				</select>
+			</header>
+		</div>
+	</div>
+	<!-- /pages-stack -->
+	<button class="menu-button"><span>Menu</span></button>
+	<script src="assets/js/classie.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery-2.1.3.min.js"></script>
+	<script src="assets/js/sweetalert.js"></script>
+
+	<script src="js/admin.js"></script>
+</body>
+
+</html>

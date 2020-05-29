@@ -10,6 +10,13 @@
 </head>
 
 <body>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script src="js/forma.js"></script>
+    <script src="js/isEnter.js"></script>
+    <script src="js/enter.js"></script>
+    <script src="js/exit.js"></script>
+
     <wrapper>
         <div class="header">
             <div class="container">
@@ -29,7 +36,7 @@
                             <li><a href="gallery.html">Галерея</a></li>
                             <li><a href="news.html">Новости</a></li>
                             <li><a href="teacher.html">Наши педагоги</a>
-                            <li><a href="register.html">Вход регистрация</a></li>
+                            <li><a id = "reg" href="#">Заявка</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -77,8 +84,24 @@
                     </p>
                 </div>
 
-                <div class="sidebar_2">
-                    <h4>Календарь</h4>
+                <div class="sidebar_2" id="fon">
+                    <h4>Добро пожаловать</h4>
+                    <p align="center" id="entermenu">Пожалуйста, войдите в систему.</p>
+                        <form id="enter_form" class="ui-form">
+                             <div class="form-row">
+                              <input type="text" name="inputEmail" required autocomplete="off"><label for="email">Email</label>
+                            </div>
+                            <div class="form-row">
+                              <input type="password" name="inputPassword" required autocomplete="off"><label for="password">Пароль</label>
+                            </div>
+                            <p><button id="vhod" class="enter">Войти</button></p>
+                        </form>
+                    
+                    <p id="afterenter" align="center">
+                        Здравствуйте, <span id="who"></span>
+                        <button id="golk">Личный кабинет</button>
+                        <button id="exitbtn">Выйти из системы</button>
+                    </p>
                 </div>
             </div>
             <div class="footer">
@@ -86,6 +109,6 @@
             </div>
         </div>
     </wrapper>
-</body>
 
+</body>
 </html>

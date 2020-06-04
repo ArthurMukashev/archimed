@@ -16,6 +16,7 @@
     <script src="js/isEnter.js"></script>
     <script src="js/enter.js"></script>
     <script src="js/exit.js"></script>
+    <script src="js/imp_news.js"></script>
 
     <wrapper>
         <div class="header">
@@ -27,16 +28,12 @@
                     <nav>
                         <ul class="topmenu">
                             <li><a href="index.html">Главная</a></li>
-                            <li><a href="" class="submenu-link">Расписание</a>
-                                <ul class="submenu">
-                                    <li><a href="raspisanie1.html">Преподавателям</a></li>
-                                    <li><a href="raspisanie2.html">Ученикам</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="raspisanie1.html" class="submenu-link">Расписание</a></li>
                             <li><a href="gallery.html">Галерея</a></li>
                             <li><a href="news.html">Новости</a></li>
                             <li><a href="teacher.html">Наши педагоги</a>
                             <li><a id = "reg" href="#">Заявка</a></li>
+                            <li><a id = "ost_otz" href="#">Оставить отзыв</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -49,9 +46,11 @@
                         <div class="block_1">
                             <h4>Контакты:</h4>
                             <ul>
-                                <li>Телефон: (3532) 452-152</li>
+                                <li>Телефон: 8(3532) 452-152</li>
                                 <li>Адрес: ул.Комсомольская 148</li>
                                 <li>E-mail:<a href="mailto:arhimed56@mail.ru">arhimed56@mail.ru</a></li>
+                                <li>Viber: 8 922 452 - 152</li>
+                                <li><a href="https://vk.com/public169616356">Группа ВКонтакте</a></li>
                             </ul>
                         </div>
                         <div class="block_2">
@@ -70,18 +69,10 @@
                 </div>
                 <div class="content">
                     <h2>Главная информация</h2>
-                    <p>aboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                        id
-                        est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <hr size="5px" color="black">
+                        <div id="important_news">
+
+                        </div>
                 </div>
 
                 <div class="sidebar_2" id="fon">
@@ -102,13 +93,22 @@
                         <button id="golk">Личный кабинет</button>
                         <button id="exitbtn">Выйти из системы</button>
                     </p>
+                    <div class="block_3">
+                        <h2>Отзывы</h2>
+                        <div id='feedback-list'>
+                            
+                            
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div class="footer">
-
+                <p>&copy; 2020 АРХИМЕД | <a href="https://vk.com/art_m_m">MUKASHEV CORP.</a></p>
             </div>
         </div>
     </wrapper>
-
+    <script src="js/show_feedback.js"></script>
+    <script src="js/isEnter2.js"></script>
 </body>
 </html>

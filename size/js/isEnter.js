@@ -40,15 +40,18 @@ var user_level_url = "../../archimed_b/userlevel.php";
                             break;
                         };
                         case "2":{
-                            window.location = "raspisanie1.html";
+                            window.location = "prepod.html";
                             break;
                         };
                         case "3":{
-                            window.location = "raspisanie2.html";
-                            break;
-                        };
-                        case "4":{
-                            window.location = "raspisanie2.html";
+                            $.ajax({
+                                url:'../../archimed_b/show_child_subject.php',
+                                type:"GET",
+                                dataType:"html",
+                                success:function(response){
+                                    Swal.fire(response)
+                                }
+                            });
                             break;
                         };
                         default:{

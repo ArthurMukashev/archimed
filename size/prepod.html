@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Режим преподавателя</title>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/super.css">
+    <script src="assets/js/modernizr-custom.js"></script>
+
+    <!--  -->
+    <link href="Files/style.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/jquery-2.1.3.min.js"></script>
+
+    <script src="Files/script.js" type="text/javascript"></script>
+    <!--  -->
+
+</head>
+
+
+<body>
+    <div class="page" id="page-blog">
+        <header class="bp-header cf">
+            <span class="bp-header__present">Режим преподавателя</span>
+            
+            <h1 class="bp-header__title">Медиатека</h1>
+            <p class="bp-header__desc">Здесь вы можете добавить или удалить фотографии</p>
+            <p class="info">Выберите действие</p>
+            <select class="s_new" id="album-action">
+                <option>Добавить альбом</option>
+                <option>Добавить фотографии в альбом</option>
+            </select>
+            <div id="new-album">
+                <form id="add_album_form">
+                    <input class="form__field" type="text" name="album_title" placeholder="Введите название альбома">
+                    <br><br>
+                    <button class="b_new" id="btn-add-album">Создать альбом</button>
+                </form>
+            </div>
+            <div id="new-photo">
+                <p class="info">Выберите альбом</p>
+                <select class="s_new" id="chosen_album"></select>
+                <br>
+                <input type="file" id="c_photos" accept="image/*" multiple>
+                <br><br>
+                <button class="b_new" id="dob_photo">Добавить фотографию</button>
+            </div>
+            <h1><a href="index.html">Вернуться на главную страницу</a></h1>
+        </header>
+    </div>
+    </div>
+    <!-- /pages-stack -->
+    <script src="assets/js/classie.js"></script>
+
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="js/prepod.js"></script>
+</body>
+
+</html>

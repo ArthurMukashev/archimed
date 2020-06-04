@@ -74,18 +74,21 @@ html.js,
 }
 
 .link {
-	font-size: 0.85em;
+	font-size: 1em;
 	font-weight: bold;
 	position: relative;
 	letter-spacing: px;
 	text-transform: uppercase;
 	border: 1px solid #0e0f0f;
 	border-radius: 10px;
+	padding:15px;
+	transition: 0.3s;
 }
 
 .link:hover,
 .link:focus {
-	color: #460c0c;
+	color: white;
+	background-color: #460c0c;
 }
 
 .link--page {

@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/demo.css">
 </head>
 
 <body>
@@ -14,16 +15,13 @@
             <div class="container">
                 <header>
                     <a href="" class="logo">
-                        <img src="img/logotype.png" width="120px" height="50px">
+                        <img src="img/logotype.png" width="120px" height="58px">
                     </a>
                     <nav>
                         <ul class="topmenu">
                             <li><a href="index.html">Главная</a></li>
-                            <li><a href="" class="submenu-link">Расписание</a>
-                                <ul class="submenu">
-                                    <li><a href="raspisanie1.html">Преподавателям</a></li>
-                                    <li><a href="raspisanie2.html">Ученикам</a></li>
-                                </ul>
+                            <li><a href="raspisanie1.html" class="submenu-link">Расписание</a>
+
                             </li>
                             <li><a href="gallery.html">Галерея</a></li>
                             <li><a href="news.html">Новости</a></li>
@@ -31,9 +29,70 @@
                         </ul>
                     </nav>
                 </header>
+                <section id="rasp">
+                    <div id="raspisanie" align="center" style="margin-top: 10px; ">
+
+                    </div>
+                </section>
             </div>
         </div>
     </wrapper>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/raspisanie.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script>
+        var is_enter2_url = "../../archimed_b/isenter2.php";
+        $.ajax({
+            url: is_enter2_url,
+            type: "GET",
+            dataType: "html",
+            success: function (response) {
+                if (!response) {
+                    $("#rasp").html('Расписание недоступно');
+                    Swal.fire({
+                        'title': 'Внимание',
+                        'html': 'Расписание недоступно',
+                        onClose: () => {
+                            let timerInterval
+                            Swal.fire({
+                                'title': 'Возврат на главную',
+                                'html': 'Пожалуйста, подождите...',
+                                timer: 1000,
+                                onBeforeOpen: () => {
+                                    Swal.showLoading();
+                                    window.location = "index.html";
+                                },
+                                onClose: () => {
+                                    clearInterval(timerInterval)
+                                }
+                            })
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+    <script>
+        function deleteLesson(event) {
+            /*var data;
+            if (event.target.innerHTML == "") {
+                data = { "key": "" };
+            }
+            else
+            {
+                data ={'key':event.target.innerHTML};
+            }
+            $.ajax({
+                url: '../../archimed_b/show_child_subject.php',
+                type: "POST",
+                data: data,
+                success: function (response) {
+                    Swal.fire(response);
+                }
+            })*/
+        }
+    </script>
+
 </body>
 
 </html>
